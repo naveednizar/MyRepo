@@ -1,0 +1,33 @@
+package com.websystique.springboot.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
+import com.websystique.springboot.model.Users;
+import com.websystique.springboot.repositories.RoleRepository;
+import com.websystique.springboot.repositories.UsersRepository;
+
+public class UsersServiceImpl implements UsersService {
+	
+	@Autowired
+	public UsersRepository usersRepository;
+	
+	@Autowired
+	public RoleRepository roleRepository;
+	
+	@Autowired
+	public BCryptPasswordEncoder encoder;
+
+	@Override
+	public void save(Users user) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public Users findByUserName(String userName) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

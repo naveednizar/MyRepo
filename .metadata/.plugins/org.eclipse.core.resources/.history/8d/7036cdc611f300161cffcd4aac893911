@@ -1,0 +1,5 @@
+package com.project.mvc.dao.impl;
+
+public class PersonDAOImpl {
+
+}

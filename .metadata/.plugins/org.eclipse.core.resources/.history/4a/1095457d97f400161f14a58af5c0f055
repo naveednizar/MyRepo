@@ -1,0 +1,5 @@
+package com.jwt.ejb.entity;
+
+public class Employee {
+
+}

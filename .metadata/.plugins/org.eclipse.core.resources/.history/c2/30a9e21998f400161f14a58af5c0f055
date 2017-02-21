@@ -1,0 +1,18 @@
+package com.jwt.ejb.business.impl;
+
+import javax.ejb.Stateless;
+
+/**
+ * Session Bean implementation class ManageEmployeeBean
+ */
+@Stateless
+public class ManageEmployeeBean implements EmployeeRemote {
+
+    /**
+     * Default constructor. 
+     */
+    public ManageEmployeeBean() {
+        // TODO Auto-generated constructor stub
+    }
+
+}

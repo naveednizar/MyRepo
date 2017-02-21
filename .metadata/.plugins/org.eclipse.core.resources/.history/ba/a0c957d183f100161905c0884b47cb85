@@ -1,0 +1,7 @@
+package com.project.persistence;
+
+public class HiberanteUtil {
+	
+	private static final SessionFactory sessionFactory = buildSessionFactory();
+
+}

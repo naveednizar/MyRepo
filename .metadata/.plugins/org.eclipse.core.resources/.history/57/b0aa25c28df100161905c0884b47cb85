@@ -1,0 +1,35 @@
+package com.project.apps;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+import org.hibernate.ejb.internal.EntityManagerFactoryRegistry;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+	private static EntityManager em;
+    public static void main( String[] args )
+    {
+    	
+    	EntityManagerFactory emFactory = Persistence.createEntityManagerFactory("EmployeePU");
+    	em = emFactory.createEntityManager();
+    	
+    	createEmployee(1, "Naveed", "Nizar Ali", "IT");
+    	createEmployee(2, "Mehreen", "Naveed", "IT");
+    	createEmployee(3, "Abdul", "Rahim", "Finance");
+    }
+    
+    private static Employee createEmployee(Integer id, String firstName, String lastName, String dept) {
+    	
+    	em.getTransaction().begin();
+    	Employee emp = new Employee(id, firstName, lastName, dept);
+    	em.persist(emp);
+    	em.getTransaction().commit();
+    	return null;
+    }
+}

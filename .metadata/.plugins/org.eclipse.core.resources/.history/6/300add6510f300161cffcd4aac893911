@@ -1,0 +1,5 @@
+package com.project.mvc.model;
+
+public class Person {
+
+}

@@ -1,0 +1,25 @@
+package com.websystique.springboot.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.websystique.springboot.model.Users;
+import com.websystique.springboot.repositories.UsersRepository;
+
+public class UsersDetailServiceImpl implements UserDetailsService {
+
+	@Autowired
+	public UsersRepository usersRepository;
+	
+	@Override
+	@Transactional(readOnly = true)
+	public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
+		
+		Users user = usersRepository.findbyUserName(userName);
+		return null;
+	}
+
+}
